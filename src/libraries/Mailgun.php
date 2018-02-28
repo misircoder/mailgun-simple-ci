@@ -91,7 +91,6 @@ class Mailgun {
 		curl_close($ch);
 		# PARSE AND RETURN
 		$json = json_decode($result);
-		var_dump($json);exit();
 		return isset($json->id) && strlen($json->id) > 2;
 	}
 }
